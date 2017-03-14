@@ -18,12 +18,12 @@ if(IS_ENV){
     }))
 }
 
-plugins.push(
-    new HtmlWebpackPlugin({
-        filename:'./index.html',
-        template:'./src/template/index.html'
-    })
-)
+// plugins.push(
+//     new HtmlWebpackPlugin({
+//         filename:'./index.html',
+//         template:'./src/template/index.html'
+//     })
+// )
 
 module.exports={
     entry:['./src/main.js'],
@@ -37,7 +37,7 @@ module.exports={
             {
                 test: /\.js(x)*$/,
                 exclude:/^node_modules$/,
-                loader:'babel'
+                loader:'babel-loader'
             },{
                 test:/\.vue$/,
                 loader:'vue'
