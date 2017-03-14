@@ -5,6 +5,12 @@
     ],
     "plugins":[
         "transform-object-assign",
-        "transform-vue-jsx"
+        "transform-vue-jsx",
+        ["component", [
+            {
+                "libraryName": "element-ui",
+                "styleLibraryName": "theme-default"
+            }
+        ]]
     ]
 }

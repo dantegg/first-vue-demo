@@ -66,8 +66,11 @@ module.exports={
         extensions:['', '.js', '.vue', '.jsx'],
         alias: {
             vue:'vue/dist/vue.js',
-            store:path.resolve('src/store/')
+            //store:path.resolve('src/store/')
         }
+    },
+    devServer: {
+        historyApiFallback: true
     },
     vue:{
         postcss:[
