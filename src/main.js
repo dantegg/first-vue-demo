@@ -4,6 +4,7 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import {routes} from './routes'
 import App from './app.vue'
+import store from './store'
 
 
 Vue.use(VueRouter)
@@ -17,6 +18,7 @@ const router = new VueRouter({
 new Vue({
     el:'#app',
     router:router,
+    store,
     render: h=>h(App)
 })
 
