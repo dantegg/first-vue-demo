@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
+import * as types from './type'
 Vue.use(Vuex)
 
 const state={
-    count:0
+    count:0,
+    todolist:[]
 }
 
 const mutations={
@@ -13,10 +14,17 @@ const mutations={
     },
     decrement(state){
         state.count--
+    },
+    addNewTodo(state,item){
+        console.log('mutations',item)
+        state.todolist.push(item)
     }
 }
 
 const actions={
+    [types.ADD_NET_TODO]({commit}){
+        commit('addNewTodo')
+    },
     increment:({commit})=> commit('increment'),
     decrement:({commit})=>commit('decrement'),
     incrementIfOdd({commit,state}){
