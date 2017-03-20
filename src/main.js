@@ -12,7 +12,8 @@ Vue.use(ElementUI)
 //Vue.use(routes)
 
 const router = new VueRouter({
-    routes
+    routes,
+    mode: 'history'
 })
 
 new Vue({

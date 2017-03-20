@@ -12,7 +12,8 @@
 </template>
 
 <script>
-import {mapMutations} from 'vuex'
+//import {mapMutations} from 'vuex'
+import store from './vuex/store'
     export default{
         name:'todo',
         data(){
@@ -30,7 +31,8 @@ import {mapMutations} from 'vuex'
             addTodo(){
                 //console.log(this.input)
                 let text = this.input
-                this.$store.commit('addNewTodo', { text:text })
+                //this.$store.commit('addNewTodo', { text:text })
+                store.commit('addNewTodo',{text:text})
                 //console.log('added',this.$store.state.todolist)  
             }
         }
