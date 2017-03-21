@@ -32,7 +32,8 @@ import store from './vuex/store'
                 //console.log(this.input)
                 let text = this.input
                 //this.$store.commit('addNewTodo', { text:text })
-                store.commit('addNewTodo',{text:text})
+                //store.commit('addNewTodo',{text:text})
+                store.dispatch('ADD_NET_TODO',{text:text})
                 //console.log('added',this.$store.state.todolist)  
             }
         }

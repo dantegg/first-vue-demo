@@ -22,8 +22,8 @@ const mutations={
 }
 
 const actions={
-    [types.ADD_NET_TODO]({commit}){
-        commit('addNewTodo')
+    [types.ADD_NET_TODO]({commit},content){
+        commit('addNewTodo',content)
     },
     increment:({commit})=> commit('increment'),
     decrement:({commit})=>commit('decrement'),
