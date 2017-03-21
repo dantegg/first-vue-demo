@@ -29,7 +29,7 @@ import store from './vuex/store'
         },
         methods:{
             addTodo(){
-                //console.log(this.input)
+                console.log('$vm',this)
                 let text = this.input
                 //this.$store.commit('addNewTodo', { text:text })
                 //store.commit('addNewTodo',{text:text})
